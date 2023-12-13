@@ -1,13 +1,19 @@
 require("dotenv").config();
 
 const express = require("express");
+// EJS Layouts
 const expressLayouts = require("express-ejs-layouts");
+const connectDB = require("./server/config/db");
+
 const res = require("express/lib/response");
 const mongoose = require("mongoose");
 
 const app = express();
 // http://localhost:5000/
 const port = 5000 || process.env.PORT;
+
+// Connect to Database
+connectDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
