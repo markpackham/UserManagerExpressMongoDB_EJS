@@ -20,16 +20,10 @@ app.use(expressLayouts);
 app.set("layout", "./layouts/main");
 app.set("view engine", "ejs");
 
-// // Home
-// app.get("/", (req, res) => {
-//   const locals = {
-//     title: "NodeJs",
-//     description: "Free NodeJs User Management System",
-//   };
-//   res.render("index", { locals });
-// });
+// Routes
+app.use("/", require("./server/routes/customer"));
 
-// 404 Page
+// 404 Error Page
 app.get("*", (req, res) => {
   res.status(404).render("404");
 });
