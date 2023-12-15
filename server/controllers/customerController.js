@@ -19,3 +19,13 @@ exports.addCustomer = async (req, res) => {
 
   res.render("customer/add", locals);
 };
+
+// POST / Create New Customer Form
+exports.postCustomer = async (req, res) => {
+  const locals = {
+    title: "New Customer Added",
+    description: "Free NodeJs User Management System",
+  };
+
+  res.render("customer/add", locals);
+};
