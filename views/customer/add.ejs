@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col">
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb-item">
+                <ol class="breadcrumb">
                     <li class="breadcrumb-item">
                         <a href="/">Dashboard</a>
                     </li>
@@ -22,5 +22,19 @@
                 </ol>
             </nav>
         </div>
+
+        <div class="col text-end fw-lighter">
+            <b>UserId</b>
+        </div>
     </div>
 </div>
+
+<form action="/add" method="POST">
+    <div class="row form-group mb-4">
+        <div class="col">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" value="" placeholder="First Name"
+                required>
+        </div>
+    </div>
+</form>
