@@ -1,4 +1,6 @@
-// Customer Routes
+const mongoose = require("mongoose");
+
+const Customer = require("../models/Customer");
 
 // GET / Homepage
 exports.homepage = async (req, res) => {
