@@ -8,7 +8,7 @@ const expressLayouts = require("express-ejs-layouts");
 const session = require("express-session");
 
 // Update user with messages after carrying out actions eg creating a customer
-const { flash } = require("express-flash-message");
+const flash = require("connect-flash");
 
 const connectDB = require("./server/config/db");
 
@@ -34,12 +34,15 @@ app.use(
     secret: "secret",
     resave: false,
     saveUninitialized: true,
-    // 24 hours
+    // An entire week
     cookie: {
-      maxAge: 1000 * 60 * 60 * 24,
+      maxAge: 1000 * 60 * 60 * 24 * 7,
     },
   })
 );
+
+// Flash Message
+app.use(flash({ sessionKeyName: "flashMessage" }));
 
 // Template Engine
 app.use(expressLayouts);
