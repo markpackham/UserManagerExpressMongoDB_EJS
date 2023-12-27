@@ -11,7 +11,12 @@ exports.homepage = async (req, res) => {
     description: "Free NodeJs User Management System",
   };
 
-  res.render("index", { messages, locals });
+  try {
+    const customers = await Customer.find({}).limit(25);
+    res.render("index", { messages, locals, customers });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // GET / New Customer Form
