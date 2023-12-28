@@ -5,19 +5,52 @@ const Customer = require("../models/Customer");
 // GET / Homepage
 exports.homepage = async (req, res) => {
   const messages = await req.flash("info");
-
   const locals = {
     title: "NodeJs",
     description: "Free NodeJs User Management System",
   };
 
+  // page limit used for pagination
+  let perPage = 12;
+  // set default request to 1
+  let page = req.query.page || 1;
+
   try {
-    const customers = await Customer.find({}).limit(25);
-    res.render("index", { messages, locals, customers });
+    const customers = await Customer.aggregate([{ $sort: { updateAt: -1 } }])
+      .skip(perPage * page - perPage)
+      .limit(perPage)
+      .exec();
+
+    const count = await Customer.countDocuments();
+
+    res.render("index", {
+      messages,
+      locals,
+      customers,
+      current: page,
+      pages: Math.ceil(count / perPage),
+    });
   } catch (error) {
     console.log(error);
   }
 };
+
+// Non Pagination solution
+// exports.homepage = async (req, res) => {
+//   const messages = await req.flash("info");
+
+//   const locals = {
+//     title: "NodeJs",
+//     description: "Free NodeJs User Management System",
+//   };
+
+//   try {
+//     const customers = await Customer.find({}).limit(25);
+//     res.render("index", { messages, locals, customers });
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 // GET / New Customer Form
 exports.addCustomer = async (req, res) => {
