@@ -100,3 +100,22 @@ exports.view = async (req, res) => {
     console.log(error);
   }
 };
+
+// GET / EDIT a Customer
+exports.edit = async (req, res) => {
+  try {
+    const customer = await Customer.findOne({ _id: req.params.id });
+
+    const locals = {
+      title: "Edit Customer Data",
+      description: "Free NodeJs User Management System",
+    };
+
+    res.render("customer/view", {
+      locals,
+      customer,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};

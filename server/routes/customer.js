@@ -14,5 +14,7 @@ router.post("/add", customerController.postCustomer);
 
 router.get("/view/:id", customerController.view);
 
+router.get("/edit/:id", customerController.edit);
+
 // Never forget to export the router
 module.exports = router;
