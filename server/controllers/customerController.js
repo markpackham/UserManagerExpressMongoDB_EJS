@@ -111,7 +111,7 @@ exports.edit = async (req, res) => {
       description: "Free NodeJs User Management System",
     };
 
-    res.render("customer/view", {
+    res.render("customer/edit", {
       locals,
       customer,
     });

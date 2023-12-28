@@ -4,6 +4,12 @@ const express = require("express");
 // EJS Layouts
 const expressLayouts = require("express-ejs-layouts");
 
+// Method Override
+// https://www.npmjs.com/package/method-override
+// Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+// Use in Middleware
+const methodOverride = require("method-override");
+
 // Working with Sessions
 const session = require("express-session");
 
@@ -24,6 +30,8 @@ connectDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// Let us use PUT & DELETE
+app.use(methodOverride("_method"));
 
 // Static Files
 app.use(express.static("public"));
