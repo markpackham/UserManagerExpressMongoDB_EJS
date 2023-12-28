@@ -93,6 +93,8 @@
                 <%= i %>
             </a></li>
         <% } %>
+        
+        <!-- The "..." part if we have a lot of pages -->
         <% if (i==Number(current) + 4 && i < pages) { %>
         <li class="page-item disabled"><a href="#" class="page-link">...</a></li>
         <% } %>
