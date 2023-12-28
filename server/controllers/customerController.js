@@ -10,9 +10,9 @@ exports.homepage = async (req, res) => {
     description: "Free NodeJs User Management System",
   };
 
-  // page limit used for pagination
+  // Page limit used for pagination
   let perPage = 12;
-  // set default request to 1
+  // Set default request to 1
   let page = req.query.page || 1;
 
   try {
@@ -77,6 +77,25 @@ exports.postCustomer = async (req, res) => {
     await req.flash("info", "Customer Added Successfully");
 
     res.redirect("/");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// GET / SHOW a Customer
+exports.view = async (req, res) => {
+  try {
+    const customer = await Customer.findOne({ _id: req.params.id });
+
+    const locals = {
+      title: "View Customer Data",
+      description: "Free NodeJs User Management System",
+    };
+
+    res.render("customer/view", {
+      locals,
+      customer,
+    });
   } catch (error) {
     console.log(error);
   }
