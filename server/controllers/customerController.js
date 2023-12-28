@@ -121,7 +121,7 @@ exports.edit = async (req, res) => {
 };
 
 // PUT / UPDATE a Customer
-exports.editPost = async (req, res) => {
+exports.update = async (req, res) => {
   try {
     await Customer.findByIdAndUpdate(req.params.id, {
       firstName: req.body.firstName,
@@ -133,8 +133,18 @@ exports.editPost = async (req, res) => {
     });
 
     res.redirect(`/edit/${req.params.id}`);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-    res.redirect("/");
+// PUT / UPDATE a Customer
+exports.delete = async (req, res) => {
+  try {
+    await Customer.deleteOne({ _id: req.params.id });
+    await req.flash("info", "Customer Deleted Successfully");
+
+    res.redirect(`/`);
   } catch (error) {
     console.log(error);
   }
