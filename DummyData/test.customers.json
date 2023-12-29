@@ -1,0 +1,226 @@
+[{
+  "_id": {
+    "$oid": "658b17387c36b52e80b3d7a6"
+  },
+  "firstName": "Bob",
+  "lastName": "Smith",
+  "tel": "543534534",
+  "email": "bobSmith@gmail.com",
+  "createdAt": {
+    "$date": "2023-12-26T18:10:34.870Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-28T14:26:50.330Z"
+  },
+  "__v": 0,
+  "details": "I have been updated"
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c0"
+  },
+  "firstName": "Raddy",
+  "lastName": "NodeJs",
+  "tel": "1-353-218-4881",
+  "email": "raddy@outlook.couk",
+  "details": "Hello world",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$date": "2023-12-28T14:52:28.037Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c1"
+  },
+  "firstName": "Aphrodite",
+  "lastName": "Parker",
+  "tel": "1-857-407-8574",
+  "email": "quam@protonmail.net",
+  "details": "Demo details text.",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$numberLong": "1640569916200"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c2"
+  },
+  "firstName": "Camden",
+  "lastName": "Perce",
+  "tel": "(251) 719-5886",
+  "email": "aliquam.tincidunt.nunc@icloud.net",
+  "details": "Demo details text.",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$numberLong": "1640569916200"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c3"
+  },
+  "firstName": "Emi",
+  "lastName": "Hutchinson",
+  "tel": "1-878-674-6876",
+  "email": "aenean.egestas@aol.org",
+  "details": "I have also been updated!!!",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$date": "2023-12-28T14:29:40.901Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c4"
+  },
+  "firstName": "Chaim",
+  "lastName": "Holland",
+  "tel": "1-776-825-8236",
+  "email": "a@google.couk",
+  "details": "Demo details text.",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$numberLong": "1640569916200"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c5"
+  },
+  "firstName": "Harding",
+  "lastName": "Cameron",
+  "tel": "1-935-750-3637",
+  "email": "non.nisi@outlook.edu",
+  "details": "Demo details text.",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$numberLong": "1640569916200"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c6"
+  },
+  "firstName": "Dane",
+  "lastName": "Kelley",
+  "tel": "(129) 964-3195",
+  "email": "morbi@aol.org",
+  "details": "Demo details text.",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$numberLong": "1640569916200"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b1c790d59791e9bf1e6c7"
+  },
+  "firstName": "Emery",
+  "lastName": "Thornton",
+  "tel": "(565) 248-4784",
+  "email": "egestas.blandit.nam@icloud.org",
+  "details": "Demo details text.",
+  "createdAt": {
+    "$numberLong": "1640569916200"
+  },
+  "updatedAt": {
+    "$numberLong": "1640569916200"
+  }
+},
+{
+  "_id": {
+    "$oid": "658b22850d70854dfe552730"
+  },
+  "firstName": "Jimbo",
+  "lastName": "Jones",
+  "tel": "534534543",
+  "email": "jimbo-jones@hotmail.com",
+  "createdAt": {
+    "$date": "2023-12-26T18:58:48.797Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-26T18:58:48.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658b23a30d70854dfe552734"
+  },
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "tel": "432423342",
+  "email": "janeSmith@js.com",
+  "createdAt": {
+    "$date": "2023-12-26T18:58:48.797Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-26T18:58:48.797Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658d5ecf5095db39c9b35841"
+  },
+  "firstName": "Frank",
+  "lastName": "Jones",
+  "tel": "342342343",
+  "email": "frank@frank.com",
+  "createdAt": {
+    "$date": "2023-12-28T11:40:29.151Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-28T11:40:29.151Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658d5ffb179678ca0df4d901"
+  },
+  "firstName": "Kelly",
+  "lastName": "Grayson",
+  "tel": "4354345453",
+  "email": "kg@kg.com",
+  "createdAt": {
+    "$date": "2023-12-28T11:43:19.252Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-28T11:43:19.252Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658d75b5e9e3ac844477a775"
+  },
+  "firstName": "Georgie",
+  "lastName": "Jones",
+  "tel": "423432423",
+  "email": "gj@gmail.com",
+  "details": "Hello I am a test",
+  "createdAt": {
+    "$date": "2023-12-28T13:17:55.651Z"
+  },
+  "updatedAt": {
+    "$date": "2023-12-28T13:17:55.651Z"
+  },
+  "__v": 0
+}]
