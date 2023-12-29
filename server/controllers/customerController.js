@@ -152,16 +152,24 @@ exports.delete = async (req, res) => {
 
 // POST / Search for a Customer
 exports.search = async (req, res) => {
+  const locals = {
+    title: "Search Customer Data",
+    description: "Free NodeJs User Management System",
+  };
+
   try {
     let searchTerm = req.body.searchTerm;
     const searchNoSpecialChars = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "");
 
+    // use regex for search ignoring case
     const customers = await Customer.find({
       $or: [
         { firstName: { $regex: new RegExp(searchNoSpecialChars, "i") } },
         { lastName: { $regex: new RegExp(searchNoSpecialChars, "i") } },
       ],
     });
+
+    res.render("search", { customers, locals });
   } catch (error) {
     console.log(error);
   }
