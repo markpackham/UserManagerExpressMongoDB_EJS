@@ -7,6 +7,8 @@ Customer Routes
 */
 router.get("/", customerController.homepage);
 
+router.get("/about", customerController.about);
+
 // eg http://localhost:5000/add
 router.get("/add", customerController.addCustomer);
 

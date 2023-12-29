@@ -35,6 +35,20 @@ exports.homepage = async (req, res) => {
   }
 };
 
+// GET / About
+exports.about = async (req, res) => {
+  const locals = {
+    title: "About",
+    description: "About site",
+  };
+
+  try {
+    res.render("about");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 // Non Pagination solution
 // exports.homepage = async (req, res) => {
 //   const messages = await req.flash("info");
