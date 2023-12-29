@@ -20,5 +20,7 @@ router.put("/edit/:id", customerController.update);
 
 router.delete("/edit/:id", customerController.delete);
 
+router.post("/search", customerController.search);
+
 // Never forget to export the router
 module.exports = router;

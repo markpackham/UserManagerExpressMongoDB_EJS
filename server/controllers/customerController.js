@@ -149,3 +149,11 @@ exports.delete = async (req, res) => {
     console.log(error);
   }
 };
+
+// POST / Search for a Customer
+exports.search = async (req, res) => {
+  try {
+  } catch (error) {
+    console.log(error);
+  }
+};
