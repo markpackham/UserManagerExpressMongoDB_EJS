@@ -153,6 +153,15 @@ exports.delete = async (req, res) => {
 // POST / Search for a Customer
 exports.search = async (req, res) => {
   try {
+    let searchTerm = req.body.searchTerm;
+    const searchNoSpecialChars = searchTerm.replace(/[^a-zA-Z0-9 ]/g, "");
+
+    const customers = await Customer.find({
+      $or: [
+        { firstName: { $regex: new RegExp(searchNoSpecialChars, "i") } },
+        { lastName: { $regex: new RegExp(searchNoSpecialChars, "i") } },
+      ],
+    });
   } catch (error) {
     console.log(error);
   }
